@@ -15,6 +15,7 @@ public class qb_movement : MonoBehaviour
     {
         if (Input.GetKey("w"))
         {
+            //
             rb.AddForce(transform.up * forwardForce);
         }
         if (Input.GetKey("s"))
