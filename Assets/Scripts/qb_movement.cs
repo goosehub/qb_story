@@ -15,20 +15,27 @@ public class qb_movement : MonoBehaviour
     {
         if (Input.GetKey("w"))
         {
-            //
-            rb.AddForce(transform.up * forwardForce);
+            if (rb.position.y < 4) {
+                rb.AddForce(transform.up * forwardForce);
+            }
         }
         if (Input.GetKey("s"))
         {
-            rb.AddForce(-transform.up * forwardForce);
+            if (rb.position.y > -4) {
+                rb.AddForce(-transform.up * forwardForce);
+            }
         }
         if (Input.GetKey("d"))
         {
-            rb.AddForce(transform.right * forwardForce);
+            if (rb.position.x < 4) {
+                rb.AddForce(transform.right * forwardForce);
+            }
         }
         if (Input.GetKey("a"))
         {
-            rb.AddForce(-transform.right * forwardForce);
+            if (rb.position.x > -4) {
+                rb.AddForce(-transform.right * forwardForce);
+            }
         }
     }
 }
